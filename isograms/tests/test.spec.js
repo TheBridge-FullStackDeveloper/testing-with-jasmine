@@ -11,4 +11,10 @@ describe("Is arraySum Kats",()=>{
         expect(typeof array['length']).toEqual("number");
     })
 
+    it ("Should exist a function named minMax",()=>{
+        expect(typeof minMax).toEqual('function');
+    })
+
+    it ("")
+
 })
