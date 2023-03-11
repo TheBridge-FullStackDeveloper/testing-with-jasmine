@@ -30,4 +30,3 @@ describe("Is arraySum Kats",()=>{
 
     
 })
-
