@@ -18,7 +18,47 @@
  * sumArray([ -6, -20, -1, -10, -12 ]) | -28
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
-
-function sumArray(array) {
+let arr = [3,5,8,9,1,4]
+function sumArray(arr) {
     
+    let result=0
+    let maxNum=0
+    let minNum=Number.MAX_SAFE_INTEGER
+    for (let i = 0; i < arr.length; i++) {
+        if(!arr[i] || arr.length < 3) return 0
+
+        if(arr[i]>maxNum){
+            maxNum = arr[i]
+          console.log(maxNum + ' mayor ')
+        }
+        if(arr[i]<minNum){
+            minNum = arr[i]
+          console.log(minNum + ' menor ')
+        }
+       
+    }
+    for (let j = 0; j < arr.length; j++){
+       if(arr[j]!==maxNum && arr[j]!==minNum){
+           result+=arr[j]
+            console.log(result)
+        }
+    }
+   return result 
+}
+console.log(sumArray(arr))
+
+let arr2=[1,2]
+function sumArray2(arr2){
+let result=0;
+let maxNum= Math.max(...arr2)
+
+let minNum=Math.min(...arr2)
+console.log(maxNum);
+console.log(minNum);
+let initialValue = 0;
+let sumWithInitial = arr2.reduce(
+  (accumulator, currentValue) => initialValue= accumulator + currentValue
+);
+
+return  initialValue - maxNum - minNum
 }
