@@ -1,16 +1,23 @@
 class PokerPlayer {
-  constructor() {
-    this.name
-    this.result
+  constructor(name) {
+    this.name = "name";
+    this.result=[];
   }
 
-  rollDie() {}
+  rollDie() {
+    return ""
+  }
 
   getResult() {}
 }
 
-const getHandName = () => {}
+const getHandName = () => {
+
+  return ""
+}
 
 const getScore = () => {}
 
-const checkWinner = () => {}
+const checkWinner = () => {
+  return ""
+}
