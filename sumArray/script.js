@@ -43,7 +43,7 @@ function result (array,array){
     return sumArray - sumArrayMinMax;
 }
 
-console.log (result());
+result();
 
 
 
