@@ -19,6 +19,65 @@
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
 
+
+//------- Prueba 1 ------//
 function sumArray(array) {
+   
+    return array
+  }
+  
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+  arr.shift()
+  arr.push()
+  const result = arr.reduce((a, b) => a + b, 0);
+  
+  console.log(result); 
+
+
+  //------- Prueba 2 ------//
+
+  function sumArray(array) {
+    //let myArray = [1,2,3,4,5,6,7,8,9,10]
+    let firstEnd = array.splice(0,array.length-1)
+     return firstEnd.reduce((a, b) => a + b, 0);
+
+ }
+
+
+ //------- Prueba 3 ------//
+
+
+ function sumArray(array){
+    let counter = 0
+    let min 
+    let max 
+  
+  
+    for(let i=0;i<array.length; i++){
+        if (array[i]>max || max===undefined){
+            max = array[i]
+        }
+        if (array[i]<min || min===undefined){
+            min = array[i]
+        }
+    }
+  minIndex = array.indexOf(min)
+  array.splice(minIndex,1)
+  maxIndex = array.indexOf(max)
+  array.splice(maxIndex,1)
+  
+  for(let i=0;i<array.length; i++){
+
+    counter += array[i]
     
+  }
+  return counter
 }
+
+console.log(sumArray([1,27,3,42]))
+
+
+  
+
+
+
