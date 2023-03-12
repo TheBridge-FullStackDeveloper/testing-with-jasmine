@@ -18,16 +18,34 @@
  * sumArray([ -6, -20, -1, -10, -12 ]) | -28
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
+const array = [1, 2, 3, 4, 5];
 
-
-const array = [1,2,3,4,5];
-
-function minMax (){
+function minMax() {
     let min = Math.min(...array);
     let max = Math.max(...array)
 
     return [min, max]
 };
+    let arrayMinMax = minMax(array);
+    console.log(arrayMinMax);
 
-console.log(minMax([ 6, 2, 1, 8, 10 ]));
+            let sumArrayMinMax = 0;
+            for (let i = 0; i < arrayMinMax.length; i++) {
+            sumArrayMinMax += arrayMinMax[i]
+            };
+
+let sumArray = 0;
+for(let i= 0; i< array.length;i++){
+    sumArray += array[i]
+}
+
+function result (array,array){
+    return sumArray - sumArrayMinMax;
+}
+
+console.log (result());
+
+
+
+
 
