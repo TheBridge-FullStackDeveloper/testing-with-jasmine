@@ -19,6 +19,40 @@
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
 
+// -1 Primera kata con reduce:
+
+function sumArray(array){
+    if(array === null || typeof array === 'undefined' ||
+    array.length === 0 || array.length === 1 || array.length === 2){
+       return 0;
+    }
+   const min = Math.min(...array); 
+    const max = Math.max(...array);
+
+    const suma = array.reduce((acumulador, valor) => acumulador + valor, 0);
+
+    return ((suma - max) - min);
+}
+ 
+
+
+//-2 kata sin el metodo "sort" ni con "reduce":
+
+
 function sumArray(array) {
     
+    if (array === null || typeof array === 'undefined' ||
+     array.length === 0 || array.length === 1 || array.length === 2){
+        return 0;
+    }
+    
+    let min = Math.min(...array);
+    let max = Math.max(...array);  
+    let sum = 0
+    for (var i = 0; i < array.length; i++ )
+    {
+        (sum += array[i]);  
+    }
+
+    return ((sum - max) - min);
 }
