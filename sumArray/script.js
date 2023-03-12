@@ -19,6 +19,22 @@
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
 
-function sumArray(array) {
-    
-}
+
+/*let sumArray(6, 2, 1, 8, 10 )*/
+/*let sumArray = [''];*/
+
+
+    let array = [6, 2, 1, 8, 10]
+    function sumArray(array) {
+        if(!array) return 0
+        return array.reduce((total, num) => total + num, 0);
+    }
+    let arr = [6, 2, 1, 8, 10]
+
+    function calculateSum(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
