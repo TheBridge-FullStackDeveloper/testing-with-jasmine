@@ -19,6 +19,31 @@
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
 
+//1.- Sort + reduce:
 function sumArray(array) {
+ array.sort() 
+   
+
+   
+    array.shift()
+    array.pop()
+  
     
-}
+    return total = array.reduce((a, b) =>
+
+         a + b, 0)
+   }
+
+array = [3, 6, 2, 8, 1]
+sumArray(array)
+
+console.log(total)
+
+// 2.-Without sort and reduce
+
+
+
+
+    
+
+
