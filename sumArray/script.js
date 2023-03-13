@@ -19,6 +19,9 @@
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
 
-function sumArray(array) {
-    
+const customArray = [];
+
+const sumArray = (array) => {
+
+
 }
