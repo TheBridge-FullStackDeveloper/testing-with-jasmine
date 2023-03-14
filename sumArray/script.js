@@ -32,14 +32,22 @@ const sumArray = (array) => {
         return 0;
     }
 
+
+    // Here i evaluate the lowest number
     for( let i=0; i < array.length; i++ ){
         // console.log(i);
-        compare += array[i];
+        if( sumArray[i] < numMin ){
+            numMin = sumArray[i];
+        }
     }
 
-    addit = ( compare - numMax ) - numMin;
-
-    return compare;
+    // Here i evaluate the highest number of the array
+    for( let j=0; j < sumArray.length; j++ ){
+        // console.log(i);
+        if( sumArray[j] > numMax ){
+            numMax = sumArray[j];
+        }
+    }
 
 }
 
