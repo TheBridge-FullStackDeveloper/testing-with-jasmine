@@ -19,9 +19,18 @@
  * sumArray([ -6, 20, -1, 10, -12 ]) | 3
  */
 
-const customArray = [];
+const customArray = [6, 2, 1, 8, 10];
+
+let numMax  = 0;
+let numMin  = 0;
+let compare = 0;
 
 const sumArray = (array) => {
 
+    for( let i=0; i < array.length; i++ ){
+        console.log( i );
+    }
 
 }
+
+sumArray( customArray );
