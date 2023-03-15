@@ -41,7 +41,10 @@ describe('Poker kata', () => {
         })
 
         it('should return a string', async () => {
+<<<<<<< HEAD
             
+=======
+>>>>>>> d0e3617fe37a1eb4f342bbc2c5fc45641a982f19
             const die = await new PokerPlayer().rollDie()
             
             expect(typeof die).toEqual('string')
