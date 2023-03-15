@@ -23,28 +23,22 @@
 //------- Prueba 1 ------//
 function sumArray(array) {
    
-    return array
-  }
-  
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
-  arr.shift()
-  arr.push()
-  const result = arr.reduce((a, b) => a + b, 0);
-  
-  console.log(result); 
+  return array
+}
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+
+arr.shift()
+arr.pop()
+
+console.log(arr)
+
+
+const result = arr.reduce((a, b) => a + b, 0);
+console.log(result); 
 
 
   //------- Prueba 2 ------//
-
-  function sumArray(array) {
-    //let myArray = [1,2,3,4,5,6,7,8,9,10]
-    let firstEnd = array.splice(0,array.length-1)
-     return firstEnd.reduce((a, b) => a + b, 0);
-
- }
-
-
- //------- Prueba 3 ------//
 
 
  function sumArray(array){
