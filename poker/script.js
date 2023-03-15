@@ -4,14 +4,14 @@ class PokerPlayer {
     this.result = [];
   }
 
-  rollDie = async () => {
+  rollDie() {
     const dice = ["A", "8", "9", "J", "Q", "K"];
     let random = Math.floor(Math.random() * 5) + 1;
     return new Promise((resolve, reject) => {
       if (dice[random]) resolve(dice[random]);
       reject(dice[0]);
     });
-  };
+  }
 
   getResult() {
     do {
