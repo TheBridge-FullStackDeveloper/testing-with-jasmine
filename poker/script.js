@@ -59,7 +59,7 @@ const getHandName = (dice=[]) => {
     console.log("dice", dice)
     console.log(getHighestDie(dice))
     const keys = Object.keys(getHighestDie(dice))
-    console.log(keys[0] + '------this are ketys[0]')
+    console.log(keys[0])
     //getHighestDie(x) 
     result= `${keys[0]}`
   }
@@ -82,12 +82,9 @@ const getScore = (result) => {
     }else if(result ===  'one pair'){
       x = scorings.one_pair
     }else{
-      x = scorings[result] + 'this is scoring results'
+      x = scorings[result] 
     }
   }
-  
-  console.log('x', x) 
-
   return x
 }
 
@@ -96,6 +93,7 @@ const checkWinner = (p1, p2) => {
   if(p1 && p2){
     const score1 = getScore(getHandName(p1.result))
     const score2 = getScore(getHandName(p2.result))
+    console.log(score1)
     if(score1 > score2){
       result = `${p1.name} wins with "${getHandName(p1.result)}" hand (it wins against "${getHandName(p2.result)}" from ${p2.name})`
      // expect(checkWinner(p1, p2)).toEqual('p1 wins with "four of a kind" hand (it wins against "one pair" from p2)')
@@ -108,8 +106,6 @@ const checkWinner = (p1, p2) => {
     }
   }
   console.log(result)
-  console.log(score1)
-  console.log(score2)
   return result
  }
 
