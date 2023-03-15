@@ -25,7 +25,7 @@ const scorings = {
   8: 1,
 };
 
-const diceCounter = (dice) => {
+const diceCounter = (dice = []) => {
   return dice.reduce((acc, curr) => {
     return {
       ...acc,
