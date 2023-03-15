@@ -1,26 +1,28 @@
 class PokerPlayer {
   constructor(nombre) {
-    if ( nombre != null){
-      this.name = nombre.toLowerCase()
-    } else {
-      this.name = "alejandra"
-    }
-    
+    this.name= nombre + "" 
     this.result = []
   }
  
-  rollDie() { 
-    const promise= new PokerPlayer ((resolve, ) => {
+  rollDie() {
+    let values = ["A", "8", "9", "Q", "K", "J"]; 
+    const promise = new Promise((resolve) => {
       setTimeout (() => {
-        resolve 
-      })
+        resolve(values[Math.floor(values.length * Math.random())])
+      }, 300)
     })
-        
+    
+    return promise;
   }
 
-
-
-  getResult() { }
+  async getResult() {
+    for (let index = 1; index <= 5; index++) {
+      let casillas = await this.rollDie();
+      if (this.result.length < 5) {
+        this.result.push(casillas)
+      }
+    }
+  }
 }
 
 const getHandName = () => { }
