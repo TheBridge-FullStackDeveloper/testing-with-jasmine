@@ -45,9 +45,9 @@ function sumArray(arr) {
     }
    return result 
 }
-console.log(sumArray(arr))
 
-let arr2=[1,2]
+console.log(sumArray(arr))
+let arr2=[1,2,5,8]
 function sumArray2(arr2){
 let result=0;
 let maxNum= Math.max(...arr2)
@@ -55,10 +55,11 @@ let maxNum= Math.max(...arr2)
 let minNum=Math.min(...arr2)
 console.log(maxNum);
 console.log(minNum);
-let initialValue = 0;
-let sumWithInitial = arr2.reduce(
-  (accumulator, currentValue) => initialValue= accumulator + currentValue
+//let initialValue = 0;
+let bb = arr2.reduce(
+  (accumulator, currentValue) =>  accumulator + currentValue, 0 
 );
-
-return  initialValue - maxNum - minNum
+  result= bb - maxNum - minNum
+  return result
 }
+console.log(sumArray2(arr2))
