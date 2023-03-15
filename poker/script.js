@@ -1,16 +1,36 @@
 class PokerPlayer {
-  constructor() {
-    this.name
-    this.result
+  constructor(Auxi) {
+    this.name = Auxi + "";
+    this.result=[];
   }
 
-  rollDie() {}
+  rollDie() {
+    const posibilities = ['A', '8', '9', 'J', 'Q', 'K'];
+    const randomPosibilities = Math.floor(Math.random() * posibilities.length);
+    const newPosibilities = posibilities [randomPosibilities];
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(newPosibilities);
+      }, 300);
+    });
+    
+    return myPromise
+    }
 
-  getResult() {}
+  getResult() {
+
+  }
 }
 
-const getHandName = () => {}
+const getHandName = () => {
 
-const getScore = () => {}
+  return ""
+}
 
-const checkWinner = () => {}
+const getScore = (getHandName) => {
+  return 
+}
+
+const checkWinner = () => {
+  return ""
+}
