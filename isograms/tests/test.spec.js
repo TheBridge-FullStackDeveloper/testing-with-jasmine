@@ -23,8 +23,6 @@ describe("Is arraySum Kats",()=>{
             const test = [ 6, 2, 1, 8, 10 ]; // test[0] test[1]
             expect(test[2]).toEqual(1)
             expect(test[4]).toEqual(10)
-
-
         })
     })
 
