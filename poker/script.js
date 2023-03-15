@@ -1,16 +1,41 @@
 class PokerPlayer {
-  constructor() {
-    this.name
-    this.result
+  constructor(name = "") {
+    this.name = name;
+    this.result = [];
   }
 
-  rollDie() {}
+  rollDie = async () => {
+    const dice = ["A", "8", "9", "J", "Q", "K"];
+    let random = Math.floor(Math.random() * 5) + 1;
+    return new Promise((resolve, reject) => {
+      if (dice[random]) resolve(dice[random]);
+      reject(dice[0]);
+    });
+  };
 
-  getResult() {}
+  getResult() {
+    do {
+      this.rollDie();
+      this.result.push(this.rollDie);
+    } while (this.result.length < 5);
+    if (this.result.length > 5) this.result.pop();
+  }
 }
 
-const getHandName = () => {}
+const getHandName = (player = new PokerPlayer()) => {
+  player.getResult();
+  let result = player.result;
+  console.log(result);
+  let sorted = result.sort();
+  console.log(sorted);
+  if (sorted[0] === sorted[4]) return "five of a kind";
+  else {
+    return "";
+  }
+};
 
-const getScore = () => {}
+const getScore = () => {};
 
-const checkWinner = () => {}
+const checkWinner = () => {
+  return "";
+};
