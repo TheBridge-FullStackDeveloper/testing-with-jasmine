@@ -19,10 +19,25 @@ class PokerPlayer {
     
   }
 
-  getResult() {}
+  getResult() {
+
+    do {
+      const dice = ["A", "8", "9", "J", "Q", "K"];
+      this.result.push(dice);
+    } while( this.result.length < 5 );
+  
+
+    if ( this.result.length > 5 ) this.result.pop();
+
+    return ;
+
+  }
 }
 
-const getHandName = () => {}
+const getHandName = () => {
+
+  return '';
+}
 
 const getScore = () => {}
 
