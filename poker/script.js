@@ -1,16 +1,30 @@
 class PokerPlayer {
-  constructor() {
-    this.name
-    this.result
+  constructor(nombre) {
+    if ( nombre != null){
+      this.name = nombre.toLowerCase()
+    } else {
+      this.name = "alejandra"
+    }
+    
+    this.result = []
+  }
+ 
+  rollDie() { 
+    const promise= new PokerPlayer ((resolve, ) => {
+      setTimeout (() => {
+        resolve 
+      })
+    })
+        
   }
 
-  rollDie() {}
 
-  getResult() {}
+
+  getResult() { }
 }
 
-const getHandName = () => {}
+const getHandName = () => { }
 
-const getScore = () => {}
+const getScore = () => { }
 
-const checkWinner = () => {}
+const checkWinner = () => { }
