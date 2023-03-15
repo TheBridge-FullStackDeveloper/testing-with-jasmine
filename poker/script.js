@@ -6,10 +6,12 @@ class PokerPlayer {
 
   rollDie() {
     const dice = ["A", "8", "9", "J", "Q", "K"];
-    let random = Math.floor(Math.random() * 5) + 1;
+    let random = Math.floor(Math.random() * 5);
     return new Promise((resolve, reject) => {
-      if (dice[random]) resolve(dice[random]);
-      reject(dice[0]);
+      setTimeout(() => {
+        if (dice[random]) resolve(dice[random]);
+        reject;
+      }, 300);
     });
   }
 

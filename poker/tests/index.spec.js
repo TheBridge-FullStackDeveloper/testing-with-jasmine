@@ -53,7 +53,7 @@ describe("Poker kata", () => {
       expect(posibilities.includes(die)).toBe(true);
     });
 
-    xit("should return a proper value after 300ms and never before", async () => {
+    it("should return a proper value after 300ms and never before", async () => {
       const t0 = performance.now();
       await new PokerPlayer().rollDie();
       const t1 = performance.now();
